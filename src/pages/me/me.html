@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar class="navbar">
+    <ion-buttons end>
+      <button ion-button (click)="setting()">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar *ngIf="userstatus == false" style="text-align:center;">
+    <ion-buttons>
+      <button class="rebtn" ion-button round (click)="register()">
+        <span class="fi">注册</span>
+      </button>
+      <button class="lobtn" ion-button round (click)="login()">
+        <span class="fi">登录</span>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar (click)="userinfo()" *ngIf="userstatus == true">
+    <ion-item-group>
+      <ion-item class="iuser">
+        <ion-thumbnail item-left>
+          <img src="assets/img/user.png">
+        </ion-thumbnail>
+        <h2>bilibili</h2>
+        <p>银币：20.0</p>
+        <ion-thumbnail item-right class="iarrow">
+          >
+        </ion-thumbnail>
+      </ion-item>
+    </ion-item-group>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="types" color="primary">
+      <ion-segment-button value="choiceness">
+        精选
+      </ion-segment-button>
+      <ion-segment-button value="opera">
+        番剧
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div *ngIf="types == 'choiceness'">
+    <choiceness></choiceness>
+  </div>
+  <div *ngIf="types == 'opera'">
+    <opera></opera>
+  </div>
+</ion-content>
