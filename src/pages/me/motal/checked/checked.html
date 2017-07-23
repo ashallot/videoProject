@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>验证手机号</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="chcontent">
+
+  <p>验证码已发送至以下手机，请5分钟内完成注册</p>
+
+
+  <p>{{contrycode}}{{username}}</p>
+
+
+  <p>
+    <ion-input class="chinput" type="number" [(ngModel)]="checkcode" autofocus="autofocus"></ion-input>
+  </p>
+
+
+  <p><a (click)="getcode()">重发验证码</a></p>
+
+  <ion-toolbar class="contoolbar">
+    <ion-buttons style="text-align:center">
+      <button [disabled]="!checkcode" class="lobtn" ion-button (click)="pwdpage()">
+        <span class="fi">下一步</span>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-content>

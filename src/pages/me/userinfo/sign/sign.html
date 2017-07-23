@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons>
+      <button ion-button (click)="back()">
+      </button>
+    </ion-buttons>
+    <ion-title>个性签名</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="save()">
+          保存
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content style="background-color: #f4f4f4;">
+  <ion-item-group>
+    <ion-item-divider color="light"></ion-item-divider>
+    <ion-item>
+      <ion-textarea type="text" [(ngModel)]="sign" clearInput="true" autofocus="autofocus"></ion-textarea>
+    </ion-item>
+  </ion-item-group>
+
+</ion-content>

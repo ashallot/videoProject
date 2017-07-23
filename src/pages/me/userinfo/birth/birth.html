@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>出生年月</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="save()">
+          保存
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content style="background-color: #f4f4f4;">
+  <ion-item-group>
+    <ion-item-divider color="light"></ion-item-divider>
+    <ion-item>
+      <ion-label>出生年月</ion-label>
+      <ion-datetime displayFormat="YYYY-MM-DD" cancelText="取消" doneText='确定' [(ngModel)]="birthday" autofocus="autofocus"></ion-datetime>
+    </ion-item>
+  </ion-item-group>
+
+</ion-content>

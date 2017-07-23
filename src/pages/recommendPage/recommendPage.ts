@@ -10,7 +10,5 @@ export class RecommendPage {
 
   types: any = "choiceness";
 
-  constructor() {
-
-  }
+  constructor() { }
 }
