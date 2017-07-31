@@ -70,24 +70,19 @@ export class SetpwdPage {
         // );
 
         //注册成功  返回mepage
-        this.regstatus = true;
+        this.regstatus = false;
 
-        if (!this.regstatus) this.registerfailed();//注册失败
-
-        this.setregstatus(true);
+        if (!this.regstatus) {
+            this.setregstatus(false);//注册失败
+        } else {
+            this.setregstatus(true);
+        }
         this.navCtrl.setRoot(RegisterPage, { islast: true });
-    }
-    //注册失败
-    public registerfailed() {
-        let alert = this.alertCtrl.create({
-            title: '注册失败',
-            subTitle: '服务器错误！',
-            buttons: ['确认']
-        });
-        alert.present();
+
+
     }
     /**
-   * 存储注册成功信息到本地缓存
+   * 存储注册成功/失败信息到本地缓存
    */
     public setregstatus(regstatus) {
         this.storage.ready().then(() => {

@@ -25,8 +25,10 @@ export class RegisterPage {
    * 刷新页面or切换页面
    */
     ionViewWillEnter() {
-        if (this.islast)
+        if (this.islast) {
             this.dismiss();
+        }
+
     }
     public register() {
         //1.http服务  向服务端发送该电话号码 并向其发送验证码

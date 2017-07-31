@@ -7,6 +7,7 @@ import { RegisterPage } from "./motal/register/register";
 import { LoginPage } from "./motal/login/login";
 import { UserinfoPage } from "./userinfo/userinfo";
 import { SettingPage } from "./setting/setting";
+import { HistoryPage } from "./history/history";
 
 
 @Component({
@@ -79,8 +80,13 @@ export class MePage {
   public register() {
     let registerModal = this.modalCtrl.create(RegisterPage);
     registerModal.onDidDismiss(data => {
-      if (data != false)
-        this.registersuccess();
+      if (data != false) {
+        if (this.regstatus != false) {
+          this.registersuccess();
+        } else {
+          this.registerfailed();
+        }
+      }
     });
     registerModal.present();
   }
@@ -128,6 +134,20 @@ export class MePage {
     });
     alert.present();
   }
+  //注册失败
+  public registerfailed() {
+    let alert = this.alertCtrl.create({
+      title: '注册失败',
+      subTitle: '服务器错误！',
+      buttons: ['确认']
+    });
+    alert.onDidDismiss(data => {
+      this.storage.ready().then(() => {
+        this.storage.remove('regstatus');
+      });
+    });
+    alert.present();
+  }
   //注销成功
   public logoutsuccess() {
     let alert = this.alertCtrl.create({
@@ -152,7 +172,12 @@ export class MePage {
     });
   }
 
-
+  /**
+   * history
+   */
+  public history() {
+    this.navCtrl.push(HistoryPage);
+  }
 
 
 

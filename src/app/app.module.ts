@@ -27,6 +27,7 @@ import { BirthPage } from "../pages/me/userinfo/birth/birth";
 import { SignPage } from "../pages/me/userinfo/sign/sign";
 import { SafePage } from "../pages/me/userinfo/safe/safe";
 import { SettingPage } from "../pages/me/setting/setting";
+import { HistoryPage } from "../pages/me/history/history";
 @NgModule({
   declarations: [
     MyApp,
@@ -44,7 +45,8 @@ import { SettingPage } from "../pages/me/setting/setting";
     BirthPage,
     SignPage,
     SafePage,
-    SettingPage
+    SettingPage,
+    HistoryPage
   ],
   imports: [
     BrowserModule,
@@ -76,7 +78,8 @@ import { SettingPage } from "../pages/me/setting/setting";
     BirthPage,
     SignPage,
     SafePage,
-    SettingPage
+    SettingPage,
+    HistoryPage
   ],
   providers: [
     Camera,

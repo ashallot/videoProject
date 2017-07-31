@@ -1,79 +1,79 @@
 <ion-header>
-  <ion-navbar class="navbar">
-    <ion-buttons end>
-      <button ion-button (click)="setting()">
+    <ion-navbar class="navbar">
+        <ion-buttons end>
+            <button ion-button (click)="setting()">
         <ion-icon name="settings"></ion-icon>
       </button>
-    </ion-buttons>
-  </ion-navbar>
-  <ion-toolbar *ngIf="!islogin" style="text-align:center;height:80px;">
-    <ion-buttons>
-      <button class="rebtn" ion-button (click)="register()">
+        </ion-buttons>
+    </ion-navbar>
+    <ion-toolbar *ngIf="!islogin" style="text-align:center;height:100px;">
+        <ion-buttons>
+            <button class="rebtn" ion-button (click)="register()">
         <span class="fi">注册</span>
       </button>
-      <button class="lobtn" ion-button (click)="login()">
+            <button class="lobtn" ion-button (click)="login()">
         <span class="fi">登录</span>
       </button>
-    </ion-buttons>
-  </ion-toolbar>
-  <ion-toolbar (click)="userinfo()" *ngIf="islogin">
-    <ion-item-group>
-      <ion-item class="iuser">
-        <ion-thumbnail item-left>
-          <img src="assets/img/user.png">
-        </ion-thumbnail>
-        <h2>{{nickname || username}}</h2>
-        <p>银币：20.0</p>
-        <ion-thumbnail item-right class="iarrow">
-          >
-        </ion-thumbnail>
-      </ion-item>
-    </ion-item-group>
-  </ion-toolbar>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar (click)="userinfo()" *ngIf="islogin">
+        <ion-item-group>
+            <ion-item class="iuser">
+                <ion-thumbnail item-left>
+                    <img src="assets/img/user.png">
+                </ion-thumbnail>
+                <h2>{{nickname || username}}</h2>
+                <p>银币：20.0</p>
+                <ion-thumbnail item-right class="iarrow">
+                    >
+                </ion-thumbnail>
+            </ion-item>
+        </ion-item-group>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item-group>
-    <ion-item-divider color="light"></ion-item-divider>
-    <button ion-item>
-            朋友圈
+    <ion-item-group>
+        <ion-item-divider color="light"></ion-item-divider>
+        <button ion-item (click)="history()">
+            历史记录
         </button>
-  </ion-item-group>
-  <ion-item-group>
-    <ion-item-divider color="light"></ion-item-divider>
-    <button ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color="light"></ion-item-divider>
+        <button ion-item>
             扫一扫
         </button>
-    <button ion-item>
+        <button ion-item>
             摇一摇
         </button>
-  </ion-item-group>
-  <ion-item-group>
-    <ion-item-divider color="light"></ion-item-divider>
-    <button ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color="light"></ion-item-divider>
+        <button ion-item>
             附近的人
         </button>
-    <button ion-item>
+        <button ion-item>
             漂流瓶
         </button>
-  </ion-item-group>
-  <ion-item-group>
-    <ion-item-divider color="light"></ion-item-divider>
-    <button ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color="light"></ion-item-divider>
+        <button ion-item>
             购物
         </button>
-    <button ion-item>
+        <button ion-item>
             游戏
         </button>
-  </ion-item-group>
-  <ion-item-group>
-    <ion-item-divider color="light"></ion-item-divider>
-    <button ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color="light"></ion-item-divider>
+        <button ion-item>
             小程序
         </button>
-  </ion-item-group>
-  <ion-item-group>
-    <ion-item-divider color="light"></ion-item-divider>
-  </ion-item-group>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color="light"></ion-item-divider>
+    </ion-item-group>
 
 </ion-content>

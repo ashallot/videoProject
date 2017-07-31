@@ -1,25 +1,21 @@
 <ion-header>
-  <ion-navbar>
-    <ion-buttons>
-      <button ion-button (click)="back()">
-      </button>
-    </ion-buttons>
-    <ion-title>昵称</ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="save()">
+    <ion-navbar>
+        <ion-title>昵称</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="save()">
           保存
       </button>
-    </ion-buttons>
-  </ion-navbar>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 
 <ion-content style="background-color: #f4f4f4;">
-  <ion-item-group>
-    <ion-item-divider color="light"></ion-item-divider>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="nickname" clearInput="true" autofocus="autofocus"></ion-input>
-    </ion-item>
-  </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color="light"></ion-item-divider>
+        <ion-item>
+            <ion-input type="text" [(ngModel)]="nickname" clearInput="true" autofocus="autofocus"></ion-input>
+        </ion-item>
+    </ion-item-group>
 
 </ion-content>

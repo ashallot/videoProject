@@ -1,44 +1,41 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>个人资料</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>个人资料</ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-item-group>
-    <ion-item-divider color="light"></ion-item-divider>
-    <button ion-item (click)="photo()">
+<ion-content style="background-color: #f4f4f4;">
+    <ion-item-group>
+        <ion-item-divider color="light"></ion-item-divider>
+        <button ion-item (click)="photo()">
             头像
         </button>
-    <button ion-item (click)="nickname()">
+        <button ion-item (click)="nickname()">
             昵称
         </button>
-    <button ion-item (click)="sex()">
+        <button ion-item (click)="sex()">
             性别
         </button>
-    <button ion-item (click)="birth()">
+        <button ion-item (click)="birth()">
             出生年月
         </button>
-    <button ion-item (click)="tosign()">
+        <button ion-item (click)="tosign()">
             个性签名
         </button>
-  </ion-item-group>
+    </ion-item-group>
 
-  <ion-item-group>
-    <ion-item-divider color="light"></ion-item-divider>
-    <button ion-item (click)="security()">
+    <ion-item-group>
+        <ion-item-divider color="light"></ion-item-divider>
+        <button ion-item (click)="security()">
             账号安全中心
         </button>
-  </ion-item-group>
+    </ion-item-group>
 
-  <ion-item-group>
-    <ion-item-divider color="light"></ion-item-divider>
-    <button ion-button class="logout" (click)="logout()">   
+    <ion-item-group>
+        <ion-item-divider color="light"></ion-item-divider>
+        <button ion-item class="logout" (click)="logout()">   
             退出登录
         </button>
-  </ion-item-group>
-  <ion-item-group>
-    <ion-item-divider color="light"></ion-item-divider>
-  </ion-item-group>
+    </ion-item-group>
 
 </ion-content>

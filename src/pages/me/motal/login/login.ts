@@ -12,7 +12,6 @@ export class LoginPage {
     username: number = null;
     nickname: string;
     password: string = '';
-    // fromregister: boolean = false;
     data: string = '';
 
     constructor(
@@ -22,10 +21,6 @@ export class LoginPage {
         public loadingCtrl: LoadingController
     ) {
         // If we navigated to this page, we will have an item available as a nav param 
-        // this.fromregister = navParams.get('fromregister');
-        // if (this.fromregister)
-        //     this.username = navParams.get('username');
-        // console.log('UserId', navParams.get('userId'));获取模态框传值
     }
     /**
      * 登录
