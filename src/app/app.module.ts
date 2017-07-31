@@ -49,11 +49,15 @@ import { SettingPage } from "../pages/me/setting/setting";
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp, {
-      backButtonText: '返回',
+      backButtonText: '',
     }),
     HttpModule,
     JsonpModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot({
+      name: '__mydb',
+         driverOrder: ['localstorage']
+        //  , 'sqlite', 'indexeddb', 'websql'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
