@@ -8,6 +8,7 @@ import { LoginPage } from "./motal/login/login";
 import { UserinfoPage } from "./userinfo/userinfo";
 import { SettingPage } from "./setting/setting";
 import { HistoryPage } from "./history/history";
+import { LocalPage } from "./local/local";
 
 
 @Component({
@@ -178,7 +179,12 @@ export class MePage {
   public history() {
     this.navCtrl.push(HistoryPage);
   }
-
+  /**
+   * local
+   */
+  public local() {
+    this.navCtrl.push(LocalPage);
+  }
 
 
 

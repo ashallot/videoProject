@@ -5,16 +5,22 @@
 </ion-header>
 
 <ion-content style="background-color: #f4f4f4;">
-    <ion-card>
-        <img src="img/nin-live.png" />
-        <ion-card-content>
+    <ion-card *ngFor="let video of data" (click)='play(video.id)'>
+        <ion-avatar>
+            <img src="{{video.url}}" class="titleimg" />
+        </ion-avatar>
+        <ion-card-content class="vtitle">
             <ion-card-title>
-                Nine Inch Nails Live
+                {{video.title}}
             </ion-card-title>
-            <h1>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-            </h1>
         </ion-card-content>
+        <ion-row class="vnote">
+            <ion-col>
+                <ion-note>
+                    播放至：{{video.progress}}
+                </ion-note>
+            </ion-col>
+        </ion-row>
     </ion-card>
 
 </ion-content>

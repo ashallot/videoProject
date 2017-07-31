@@ -8,6 +8,10 @@ import { Opera } from './../pages/recommendPage/opera/opera';
 import { Choiceness } from './../pages/recommendPage/choiceness/choiceness';
 import { ListPage } from '../pages/list/list';
 
+import { IonicStorageModule } from '@ionic/storage';
+import { Camera } from '@ionic-native/camera';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { VideoPlayer } from '@ionic-native/video-player';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -19,15 +23,13 @@ import { SetpwdPage } from "../pages/me/motal/setpwd/setpwd";
 import { LoginPage } from "../pages/me/motal/login/login";
 import { UserinfoPage } from "../pages/me/userinfo/userinfo";
 
-import { IonicStorageModule } from '@ionic/storage';
-import { Camera } from '@ionic-native/camera';
-import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { NicknamePage } from "../pages/me/userinfo/nickname/nickname";
 import { BirthPage } from "../pages/me/userinfo/birth/birth";
 import { SignPage } from "../pages/me/userinfo/sign/sign";
 import { SafePage } from "../pages/me/userinfo/safe/safe";
 import { SettingPage } from "../pages/me/setting/setting";
 import { HistoryPage } from "../pages/me/history/history";
+import { LocalPage } from "../pages/me/local/local";
 @NgModule({
   declarations: [
     MyApp,
@@ -46,7 +48,8 @@ import { HistoryPage } from "../pages/me/history/history";
     SignPage,
     SafePage,
     SettingPage,
-    HistoryPage
+    HistoryPage,
+    LocalPage
   ],
   imports: [
     BrowserModule,
@@ -79,9 +82,11 @@ import { HistoryPage } from "../pages/me/history/history";
     SignPage,
     SafePage,
     SettingPage,
-    HistoryPage
+    HistoryPage,
+    LocalPage
   ],
   providers: [
+    VideoPlayer,
     Camera,
     FileTransfer,
     FileTransferObject,
