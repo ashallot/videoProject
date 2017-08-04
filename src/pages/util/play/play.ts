@@ -6,13 +6,13 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class PlayPage {
     url:any;
-    trueurl:any;
+    safeurl:any;
     constructor(
         public navparams:NavParams,
         private sanitizer: DomSanitizer
     ) { 
         this.url = navparams.get('url');
-        this.trueurl = sanitizer.bypassSecurityTrustResourceUrl(this.url);
+        this.safeurl = sanitizer.bypassSecurityTrustResourceUrl(this.url);
      }
 
 }

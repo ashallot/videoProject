@@ -1,3 +1,4 @@
+import { VideoPlayer } from '@ionic-native/video-player';
 import { NavController, LoadingController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { PlayPage } from "../../util/play/play";
@@ -16,95 +17,64 @@ export class LocalPage {
     constructor(
         public navCtrl: NavController,
         public loadingCtrl:LoadingController,
-        private file:File
+        private file:File,
+        public  videoPlayer:VideoPlayer
     ) { }
 
    /**
     * 刷新页面or切换页面
     */
     ionViewWillEnter(){
-        this.load(this.username);
+        this.load();
     }
     /**
      * load
      */
-    public load(u) {
+    public load() {
         let loading = this.loadingCtrl.create({
             spinner: 'bubbles',
             duration: 1000
         });
 
         loading.onDidDismiss(() => {
-            this.request(u);
+            this.request();
             console.log('Dismissed loading');
         });
 
         loading.present();
     }
     /**
-     * request
+     * request local
      */
-    public request(u) {
+    public request() {
         //file
-        // this.name = "username=" + this.username;
-        // this.service.postuser(this.name).subscribe(
-        //     res => {
-        //         this.data = res;
-        //     },
-        //     error => { console.log(error) },
-        //     () => { }
-        // );
         
-        this.file.checkDir(this.file.externalDataDirectory, 'Movies')
+        this.file.checkDir(this.file.externalRootDirectory, 'Movies')
             .then(_=> this.qqqq = '11111')
             .catch(err => this.wwww = '22222');
-        this.file.listDir('/mnt/sdcard/Movies', 'Movies')
+        this.file.listDir(this.file.externalRootDirectory, 'Movies')
             .then((list) => {
                 this.data=list;
+                // this.data.forEach(element => {
+                //     element.img = this.file.externalRootDirectory+'Movies/.'+element.name.substring(0, element.name.lastIndexOf("."))+'.png';
+                // });
                 this.eeee = '33333';
             })
             .catch(err => this.rrrr = '44444');
-        // this.file.checkDir(this.file.externalRootDirectory, 'assets')
-        //     .then(_=> console.log('Directory exist'))
-        //     .catch(err => console.log('Directory doesnt exist'));
-        // this.file.listDir('D:\ng4\vp\videoProject\src\assets', 'assets')
-        //     .then(list => {
-        //         this.data=list;
-        //         console.log(list);
-        //     })
-        //     .catch(err => console.log('Directory doesnt exist'));
-            
-        // this.data=[
-        //     {
-        //         "url":'assets/video/test1.mp4',
-        //         "title":'test1',
-        //         "progress":'20%'
-        //     },
-        //     {
-        //         "url":'assets/video/test2.mp4',
-        //         "title":'test2',
-        //         "progress":'50%'
-        //     },
-        //     {
-        //         "url":'http://baidu.ku6.com/watch/08427054594434063760.html?&recFrom=site&fr=ps_ala11',
-        //         "title":'test2',
-        //         "progress":'50%'
-        //     }
-        // ]
     }
 
     /**
      * play
      */
     public play(url) {
-        this.navCtrl.push(PlayPage,{url:url});
+        // this.navCtrl.push(PlayPage,{url:url});
         // Playing a video.
-        // this.videoPlayer.play(url);
-        // .then(() => {
-        //     console.log('video completed');
-        // }).catch(err => {
-        //     console.log(err);
-        // });
+        this.videoPlayer.play(this.file.externalRootDirectory+'Movies/'+url)
+        .then(() => {
+            console.log('video completed');
+        }).catch(err => {
+            console.log(err);
+        });
     }
 
 
