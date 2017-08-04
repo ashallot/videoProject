@@ -2,18 +2,18 @@
     <ion-navbar class="navbar">
         <ion-buttons end>
             <button ion-button (click)="setting()">
-        <ion-icon name="settings"></ion-icon>
-      </button>
+                <ion-icon name="settings"></ion-icon>
+            </button>
         </ion-buttons>
     </ion-navbar>
     <ion-toolbar *ngIf="!islogin" style="text-align:center;height:100px;">
         <ion-buttons>
             <button class="rebtn" ion-button (click)="register()">
-        <span class="fi">注册</span>
-      </button>
+                <span class="fi">注册</span>
+            </button>
             <button class="lobtn" ion-button (click)="login()">
-        <span class="fi">登录</span>
-      </button>
+                <span class="fi">登录</span>
+            </button>
         </ion-buttons>
     </ion-toolbar>
     <ion-toolbar (click)="userinfo()" *ngIf="islogin">

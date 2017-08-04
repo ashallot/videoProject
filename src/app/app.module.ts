@@ -11,9 +11,10 @@ import { ListPage } from '../pages/list/list';
 import { IonicStorageModule } from '@ionic/storage';
 import { Camera } from '@ionic-native/camera';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
-import { VideoPlayer } from '@ionic-native/video-player';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { VideoPlayer } from "@ionic-native/video-player";
+import { File } from '@ionic-native/file';
 
 import { MePage } from "../pages/me/me";
 import { HttpModule, JsonpModule } from "@angular/http";
@@ -30,6 +31,7 @@ import { SafePage } from "../pages/me/userinfo/safe/safe";
 import { SettingPage } from "../pages/me/setting/setting";
 import { HistoryPage } from "../pages/me/history/history";
 import { LocalPage } from "../pages/me/local/local";
+import { PlayPage } from "../pages/util/play/play";
 @NgModule({
   declarations: [
     MyApp,
@@ -49,7 +51,8 @@ import { LocalPage } from "../pages/me/local/local";
     SafePage,
     SettingPage,
     HistoryPage,
-    LocalPage
+    LocalPage,
+    PlayPage
   ],
   imports: [
     BrowserModule,
@@ -83,11 +86,13 @@ import { LocalPage } from "../pages/me/local/local";
     SafePage,
     SettingPage,
     HistoryPage,
-    LocalPage
+    LocalPage,
+    PlayPage
   ],
   providers: [
     VideoPlayer,
     Camera,
+    File,
     FileTransfer,
     FileTransferObject,
     StatusBar,
