@@ -32,11 +32,15 @@ import { SettingPage } from "../pages/me/setting/setting";
 import { HistoryPage } from "../pages/me/history/history";
 import { LocalPage } from "../pages/me/local/local";
 import { PlayPage } from "../pages/util/play/play";
+import { GamePage } from '../pages/game/game';
+import { ClassifyPage } from '../pages/classify/classify';
 @NgModule({
   declarations: [
     MyApp,
     RecommendPage,
     MePage,
+    GamePage,
+    ClassifyPage,
     ListPage,
     Choiceness,
     Opera,
@@ -72,6 +76,8 @@ import { PlayPage } from "../pages/util/play/play";
     MyApp,
     RecommendPage,
     MePage,
+    GamePage,
+    ClassifyPage,
     ListPage,
     Choiceness,
     Opera,

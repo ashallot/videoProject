@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
     <ion-navbar>
         <ion-buttons end>
             <button ion-button (click)="dismiss()">
@@ -21,6 +21,48 @@
         <ion-buttons style="text-align:center">
             <button [disabled]="!username" class="lobtn" ion-button (click)="register()">
         <span class="fi">获取验证码</span>
+      </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-content> -->
+
+<ion-header>
+    <ion-navbar>
+        <ion-buttons end>
+            <button ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+        </ion-buttons>
+        <ion-title>注册账号</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label color="primary">
+            账号：
+        </ion-label>
+        <ion-input type="number" placeholder="请注册账号" [(ngModel)]="username" clearInput="true" autofocus="autofocus"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary">
+            密码：
+        </ion-label>
+        <ion-input type="number" placeholder="请输入密码" [(ngModel)]="password" clearInput="true" autofocus="autofocus"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary">
+            确认密码：
+        </ion-label>
+        <ion-input type="number" placeholder="请确认密码" [(ngModel)]="repassword" clearInput="true" autofocus="autofocus"></ion-input>
+    </ion-item>
+    <p style="text-align: center !important;color: red !important;" [hidden]="password == repassword">
+        两次密码不一致！请核对!
+    </p>
+    <ion-toolbar class="contoolbar">
+        <ion-buttons style="text-align:center">
+            <button [disabled]="!username||!password||password!=repassword" class="lobtn" ion-button (click)="register()">
+        <span class="fi">提交</span>
       </button>
         </ion-buttons>
     </ion-toolbar>

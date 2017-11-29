@@ -25,23 +25,7 @@ export class LocalPage {
     * 刷新页面or切换页面
     */
     ionViewWillEnter(){
-        this.load();
-    }
-    /**
-     * load
-     */
-    public load() {
-        let loading = this.loadingCtrl.create({
-            spinner: 'bubbles',
-            duration: 1000
-        });
-
-        loading.onDidDismiss(() => {
-            this.request();
-            console.log('Dismissed loading');
-        });
-
-        loading.present();
+        this.request();
     }
     /**
      * request local

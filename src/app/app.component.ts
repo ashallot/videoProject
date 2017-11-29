@@ -5,6 +5,8 @@ import { Platform } from 'ionic-angular';
 import { RecommendPage } from '../pages/recommendPage/recommendPage';
 import { ListPage } from '../pages/list/list';
 import { MePage } from "../pages/me/me";
+import { GamePage } from '../pages/game/game';
+import { ClassifyPage } from '../pages/classify/classify';
 
 
 @Component({
@@ -15,7 +17,8 @@ export class MyApp {
   recommendPage: any = RecommendPage;
   listPage: any = ListPage;
   mePage: any = MePage;
-
+  gamePage:any = GamePage;
+  classifyPage:any = ClassifyPage;
   constructor(
     public platform: Platform
   ) {

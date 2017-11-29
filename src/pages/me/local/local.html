@@ -6,7 +6,7 @@
 
 <ion-content style="background-color: #f4f4f4;">
     <!-- {{qqqq}}{{wwww}}{{eeee}}{{rrrr}} -->
-    <ion-card *ngFor="let video of data" (click)='play(video.name)'>
+    <!-- <ion-card *ngFor="let video of data" (click)='play(video.name)'>
         <ion-avatar>
             <img [src]="video.img" class="titleimg" />
         </ion-avatar>
@@ -16,6 +16,20 @@
             </ion-card-title>
         </ion-card-content>
         <ion-row class="vnote">
+            <ion-col>
+                <ion-note>
+                    播放至：{{video.progress}}
+                </ion-note>
+            </ion-col>
+        </ion-row>
+    </ion-card> -->
+    <ion-card *ngFor="let video of data" (click)='play(video.name)'>
+        <ion-card-content>
+            <ion-card-title>
+                {{video.name}}
+            </ion-card-title>
+        </ion-card-content>
+        <ion-row style="margin-left:4%;">
             <ion-col>
                 <ion-note>
                     播放至：{{video.progress}}

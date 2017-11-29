@@ -6,16 +6,16 @@ import { Component } from '@angular/core';
 })
 export class HistoryPage {
     username: number;
-    data:any;
+    data: any;
     constructor(
         public navCtrl: NavController,
-        public loadingCtrl:LoadingController
+        public loadingCtrl: LoadingController
     ) { }
 
     /**
     * 刷新页面or切换页面
     */
-    ionViewWillEnter(){
+    ionViewWillEnter() {
         this.load(this.username);
     }
     /**
@@ -24,15 +24,16 @@ export class HistoryPage {
     public load(u) {
         let loading = this.loadingCtrl.create({
             spinner: 'bubbles',
-            duration: 1000
+            // duration: 1000
         });
-
+        
+        // this.request(u);
         loading.onDidDismiss(() => {
-            this.request(u);
             console.log('Dismissed loading');
         });
 
         loading.present();
+
     }
     /**
      * request
@@ -47,18 +48,18 @@ export class HistoryPage {
         //     error => { console.log(error) },
         //     () => { }
         // );
-        this.data=[
+        this.data = [
             {
-                "id":'1',
-                "url":'assets/img/123.png',
-                "title":'夏目友人帐1',
-                "progress":'20%'
+                "id": '1',
+                "url": 'assets/img/123.png',
+                "title": '夏目友人帐1',
+                "progress": '20%'
             },
             {
-                "id":'2',
-                "url":'assets/img/123.png',
-                "title":'夏目友人帐2',
-                "progress":'50%'
+                "id": '2',
+                "url": 'assets/img/123.png',
+                "title": '夏目友人帐2',
+                "progress": '50%'
             }
         ]
     }
@@ -67,6 +68,6 @@ export class HistoryPage {
      * play
      */
     public play(id) {
-        console.log('playing...video'+id);
+        console.log('playing...video' + id);
     }
 }

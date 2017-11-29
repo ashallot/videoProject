@@ -1,0 +1,11 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>热门游戏推荐</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let game of data">
+        <img [src]=game.url style="height:145px;">
+    </ion-card>
+</ion-content>
