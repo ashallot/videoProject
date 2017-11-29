@@ -1,3 +1,4 @@
+import { HotPage } from './../pages/hot/hot';
 import { Component } from '@angular/core';
 
 import { Platform } from 'ionic-angular';
@@ -19,6 +20,7 @@ export class MyApp {
   mePage: any = MePage;
   gamePage:any = GamePage;
   classifyPage:any = ClassifyPage;
+  hotPage:any = HotPage;
   constructor(
     public platform: Platform
   ) {

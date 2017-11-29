@@ -34,6 +34,7 @@ import { LocalPage } from "../pages/me/local/local";
 import { PlayPage } from "../pages/util/play/play";
 import { GamePage } from '../pages/game/game';
 import { ClassifyPage } from '../pages/classify/classify';
+import { HotPage } from '../pages/hot/hot';
 @NgModule({
   declarations: [
     MyApp,
@@ -41,6 +42,7 @@ import { ClassifyPage } from '../pages/classify/classify';
     MePage,
     GamePage,
     ClassifyPage,
+    HotPage,
     ListPage,
     Choiceness,
     Opera,
@@ -78,6 +80,7 @@ import { ClassifyPage } from '../pages/classify/classify';
     MePage,
     GamePage,
     ClassifyPage,
+    HotPage,
     ListPage,
     Choiceness,
     Opera,

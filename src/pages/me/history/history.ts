@@ -24,10 +24,10 @@ export class HistoryPage {
     public load(u) {
         let loading = this.loadingCtrl.create({
             spinner: 'bubbles',
-            // duration: 1000
+            duration: 1000
         });
         
-        // this.request(u);
+        this.request(u);
         loading.onDidDismiss(() => {
             console.log('Dismissed loading');
         });

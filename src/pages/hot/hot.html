@@ -1,3 +1,9 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>热点聚焦</ion-title>
+    </ion-navbar>
+</ion-header>
+
 <ion-content>
     <ion-card *ngFor="let hot of data">
         <a [href]=hot.address><img [src]=hot.url></a>

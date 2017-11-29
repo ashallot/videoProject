@@ -1,22 +1,50 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-segment [(ngModel)]="types" color="primary">
-      <ion-segment-button value="choiceness">
-        精选
-      </ion-segment-button>
-      <ion-segment-button value="opera">
-        番剧
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-segment [(ngModel)]="types" color="primary">
+            <ion-segment-button value="choiceness">
+                精选
+            </ion-segment-button>
+            <ion-segment-button value="opera">
+                番剧
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
-  <div *ngIf="types == 'choiceness'">
-    <choiceness></choiceness>
-  </div>
-  <div *ngIf="types == 'opera'">
-    <opera></opera>
-  </div>
+    <div *ngIf="types == 'choiceness'">
+        <choiceness></choiceness>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6>
+                    <ion-card *ngFor="let jx of data11">
+                        <a [href]=jx.address><img [src]=jx.url></a>
+                    </ion-card>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-card *ngFor="let jx of data12">
+                        <a [href]=jx.address><img [src]=jx.url></a>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <div *ngIf="types == 'opera'">
+        <opera></opera>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6>
+                    <ion-card *ngFor="let jx of data21">
+                        <a [href]=jx.address><img [src]=jx.url></a>
+                    </ion-card>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-card *ngFor="let jx of data22">
+                        <a [href]=jx.address><img [src]=jx.url></a>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
 </ion-content>
